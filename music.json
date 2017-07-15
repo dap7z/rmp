@@ -1,0 +1,16 @@
+{
+	"music": [
+		{ 1: {
+				title: "Titre",
+				artist_name: "ArtistName",
+				file: "Hold_On_a_Minute"
+			}
+		},
+		{ 2: {
+				title: "Titre",
+				artist_name: "ArtistName",
+				file: "Earthy_Crust"
+			}
+		}
+	]
+}

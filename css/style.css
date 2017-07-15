@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+
+/* Mobile First */
+@media { #currentBootStrapSize:before {content:"xs";} }
+@media (min-width: 34em) { #currentBootStrapSize:before {content:"sm";} }
+@media (min-width: 48em) { #currentBootStrapSize:before {content:"md";} }
+@media (min-width: 62em) { #currentBootStrapSize:before {content:"lg";} }
+@media (min-width: 75em) { #currentBootStrapSize:before {content:"xl";} }
+
+html, body {
+   height: 100%;
+   background-color: #FFFFFF;
+   border: 0px solid transparent;
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   min-height: 100%;
+}
+
+.full-size{
+   width: 100%;
+}
+.txt-center{
+    text-align: center;
+}
+.cnt-center{
+    justify-content: center;
+    /* for display flex */
+}
+.no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.no-margin{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*
+.flex-fill {
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+.flex-fixed {
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+*/
+
+#sound-volume, #audio-progress{
+    vertical-align: middle;
+}
+
+.layout-main {
+   height: 100%;
+   margin: 0px auto 0px auto;
+   min-height: 100%;
+}
+
+.main {
+   height: 100%;
+   min-height: 100%;
+}
+
+.layout-menu{
+    margin-bottom: 20px;
+}
+.layout-menu button{
+    cursor: pointer;
+}
+
+.layout-header{
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+#pochette-container{
+    display:flex;
+    align-content: flex-start;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+#pochette-model{
+    display:none;
+}
+.pochette.selected{
+    background-color: aliceblue;
+}
+
+.block-player, .block-infos, .block-search{
+    display: inline-block;
+    /*margin: 0 !important;*/
+    margin: 0;
+}
+.block-player{
+    min-width: 200px;
+}
+.block-player div.row{
+    margin-bottom: 6px;
+}
+
+.block-infos{
+    margin-bottom: 10px;
+}
+
+
+.block-player div{
+    min-height: 36px;
+}
+.block-player div span{
+    text-align: center;
+}
+
+/* pochette */
+.pochette{
+    display: inline-block;
+    margin: 6px;
+    padding: 4px;
+    text-align: center;
+}
+.pochette-image{
+    display: flex;
+    width:100%;;
+    padding: 0;
+}
+
+.pochette div.card-block{
+    padding: 0;
+}
+

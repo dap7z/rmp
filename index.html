@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <title>Media Player</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" media="screen" title="no title" rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    
+    <audio id="audio" src="">
+        Votre navigateur ne supporte pas l'élément <code>audio</code>.
+    </audio>
+    
+    <div class="layout-main">
+        <div class="main container-fluid">
+            
+            <div id="msg-panel"></div>
+			<div style="display: none;"><div class="alert alert-info"><div id="currentBootStrapSize"></div></div></div>
+            
+			<header class="layout-header flex-fixed">
+                <div class="row">
+                    
+                    <!-- Header -->
+                    <div class="block-player col-xs-12 col-md-5">
+                        <div class="row">
+                            <span class="col-3"><button id="prev" class="full-size btn btn-secondary fa fa-arrow-circle-left"></button></span>
+                            <span class="col-6"><button id="play" class="full-size btn btn-secondary fa fa-play-circle-o"></button></span>
+                            <span class="col-3"><button id="next" class="full-size btn btn-secondary fa fa-arrow-circle-right"></button></span>
+                        </div>
+                        <div class="row">
+                            <span class="col-3"><button id="sound-less" class="col btn btn-secondary fa fa-volume-down"></button></span>
+                            <span class="col-6"><input id="sound-volume" class="full-size" type="range" value="50" /></span> 
+                            <span class="col-3"><button id="sound-more" class="col btn btn-secondary fa fa-volume-up"></button></span>
+                        </div>
+                    </div>
+
+                    <div class="block-infos col-xs-12 col-md-4">
+                        <span class="nomArtiste"></span>
+                        <span class="titreChanson"></span>
+                        <span id="audio-time"></span>
+                        <div class="row">
+                            <span class="col-12"><input id="audio-progress" class="full-size" type="range" value="0" /></span>
+                        </div>
+                    </div>
+                    <div class="block-search col-xs-12 col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <!-- <button class="btn btn-secondary fa fa-search" type="button"></button> -->
+                                <button class="btn btn-secondary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            <input class="form-control" name="q" placeholder="recherche"> 
+                        </div>
+                    </div>
+                    
+                </div>
+            </header>
+			
+            
+			<div class="row">
+            
+                <!-- Menu no class "menu" -->
+                <div class="layout-menu col-lg-2 col-xl-1">
+                    <!-- menu horizonthal cache sur large device et superieurs -->
+                    <div class="hidden-xs-down hidden-lg-up btn-group col-12 cnt-center" role="group" aria-label="menu">
+                        <button type="button" class="btn btn-secondary"><a href="#">Music</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#">Vidéo</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#">Potcast</a></button>
+                    </div>
+                    <!-- menu horizonthal cache sur medium device et inferieurs -->
+                    <div class="hidden-md-down btn-group-vertical col-12 no-padding no-margin" role="group" aria-label="menu">
+                        <button type="button" class="btn btn-secondary"><a href="#">Music</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#">Vidéo</a></button>
+                        <button type="button" class="btn btn-secondary"><a href="#">Potcast</a></button>
+                    </div>
+                </div>
+
+                <div class="layout-content col-lg-10 col-xl-11">
+                    <ul id="pochette-container" class="row section-no-header flex-fill">
+                        <li id="pochette-model" class="pochette card col-xl-1 col-lg-2 col-sm-3 col-xs-6">
+                            <div class="card-block">
+                                <a class="pochette-link" href="#" data-identifier="">
+                                    <!-- meilleure résolution des images sur device plus grand A_FAIRE_JQUERY -->
+                                    <!-- 
+                                        <img class="pochette-image" data-src="ressources/pochettes/340/" src="">
+                                        <img class="pochette-image" data-src="ressources/pochettes/250/" src=""/>
+                                        <img class="pochette-image" data-src="ressources/pochettes/175/" src=""/>
+                                        <img class="pochette-image" data-src="ressources/pochettes/150/" src=""/>
+                                    -->
+                                    <img class="pochette-image" data-src="ressources/pochettes/150/" src=""/>
+                                    <h4><div class="pochette-title text-info"></div></h4>
+                                    <h6><div class="pochette-artist text-info"></div></h6>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
